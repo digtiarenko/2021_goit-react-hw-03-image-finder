@@ -1,8 +1,8 @@
 import ImageGalleryItem from '../ImageGalleryItem';
 import styles from './ImageGallery.module.css';
+import propTypes from 'prop-types';
 
 const ImageGallery = ({ images, onClickImg }) => {
-  // console.log('openModal in ImageGallery', onClickImg);
   return (
     <ul className={styles.ImageGallery}>
       {images.map(image => (
@@ -16,6 +16,10 @@ const ImageGallery = ({ images, onClickImg }) => {
       ))}
     </ul>
   );
+};
+
+ImageGallery.propTypes = {
+  images: propTypes.array.isRequired,
 };
 
 export default ImageGallery;

@@ -1,4 +1,5 @@
 import styles from './Button.module.css';
+import propTypes from 'prop-types';
 
 const Button = ({ onClick }) => {
   window.scrollTo({
@@ -12,6 +13,10 @@ const Button = ({ onClick }) => {
       </button>
     </div>
   );
+};
+
+Button.propTypes = {
+  onClick: propTypes.func.isRequired,
 };
 
 export default Button;
