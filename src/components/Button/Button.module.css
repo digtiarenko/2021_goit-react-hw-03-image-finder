@@ -1,6 +1,7 @@
 .ButtonDiv {
   display: flex;
   text-align: center;
+  padding-bottom: 45px;
 }
 
 .Button {
