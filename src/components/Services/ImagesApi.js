@@ -1,5 +1,5 @@
 import axios from 'axios';
-import API from '../variables/key';
+import API from '../../key';
 
 const fetchImages = ({ searchQuery, page }) => {
   return axios

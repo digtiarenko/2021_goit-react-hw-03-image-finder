@@ -2,7 +2,7 @@ import { Component } from 'react';
 import SearchBar from './components/SearchBar';
 import ImageGallery from './components/ImageGallery';
 import Button from './components/Button';
-import ImagesApi from './components/ImagesApi';
+import ImagesApi from './components/Services/ImagesApi';
 import LoaderAnimation from './components/Loader';
 import Modal from './components/Modal';
 
@@ -63,6 +63,12 @@ class App extends Component {
       )
       .catch(error => this.setState({ error: error }))
       .finally(() => {
+        if (this.state.page > 2) {
+          window.scrollTo({
+            top: document.documentElement.offsetHeight,
+            behavior: 'smooth',
+          });
+        }
         this.setState({
           isLoading: false,
         });
